@@ -1,0 +1,18 @@
+{
+  "name": "kangxizidian",
+  "description": "The Kangxi Dictionary",
+  "version": "0.1",
+  "main": "index.html",
+  "single-instance":true,
+  "window": {
+    "toolbar": true,
+    "width": 660,
+    "height": 500
+  },
+ "repositories": [
+       {
+            "type": "git", 
+            "url": "http://github.com/yapcheahshen/kangxizidian.git"
+       }  
+    ]
+}
