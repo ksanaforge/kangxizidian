@@ -1,0 +1,9 @@
+.candidate {font-size:150%;}
+hl {color:red;}
+.pagetext {}
+wh {font-size:200%;color:blue;}
+sc:before {content: "總筆劃:" attr(n) }
+zh {color: brown} 
+t {font-size:150%;}
+ph:before { content: url("ph.png")}
+d:before { content: "[例]"}

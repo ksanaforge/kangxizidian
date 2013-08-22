@@ -14,7 +14,7 @@ define(['backbone','glyphemesearch'], function(Backbone,glyphemesearch) {
           for (var i=0;i<tofind.length;i++) {
             map[tofind[i]]=data[i];
           }
-          res=glyphemesearch(map,tofind);
+          var res=glyphemesearch(map,tofind);
           that.sandbox.emit("characterlist.change",res);
       	});
       } else {

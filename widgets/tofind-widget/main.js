@@ -15,9 +15,12 @@ define(['underscore','text!./tofind.tmpl'], function(_,template) {
           }
         },300);
     },
+
     initialize: function() {
      	this.html(_.template(template,{ value:this.options.value||""}) );
       $("#tofind").focus();
+      $("#tofind").val(localStorage.getItem("tofind"));
+      this.dosearch();
     }
   };
 });

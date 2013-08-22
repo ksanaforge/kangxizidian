@@ -6,13 +6,13 @@
   "single-instance":true,
   "window": {
     "toolbar": true,
-    "width": 660,
-    "height": 500
+    "width": 1020,
+    "height": 600
   },
  "repositories": [
        {
             "type": "git", 
-            "url": "http://github.com/yapcheahshen/kangxizidian.git"
+            "url": "http://github.com/ksanaforge/kangxizidian.git"
        }  
     ]
 }
