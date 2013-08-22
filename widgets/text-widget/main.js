@@ -37,7 +37,8 @@ define(['underscore','text!./text.tmpl'], function(_,template) {
     initialize: function() {
       $(window).resize( _.bind(this.resize,this) );
       this.sandbox.on('wh.change',this.showdef,this);
-      height
+      this.sandbox.on('tofind.change',this.showdef,this);
+      
     }
   };
 });
