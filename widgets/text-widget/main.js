@@ -3,21 +3,12 @@ define(['underscore','text!./text.tmpl'], function(_,template) {
     dbname : 'kangxizidian',
     type: 'Backbone',
     events: {
+      'click .destroy':'closeme'
     },
-    
-    resize:function() {
-      var that=this;
-      this.$el.css("height", (window.innerHeight - this.$el.offset().top -18) +"px");
-      this.$el.unbind('scroll');
-      this.$el.bind("scroll", function() {
-        if (that.$el.scrollTop()+ that.$el.innerHeight()+3> that.$el[0].scrollHeight) {
-          that.loadscreenful();
-        }
-      });
-
-    },    
+    closeme:function() {
+      this.$el.hide('slow', function(){ this.$el.remove(); });
+    },
     showdef:function(wh) {
-      this.resize();
       var that=this;
       var yase=this.sandbox.yase;
       var opts={db:this.dbname,tag:"wh",tofind:wh,grouped:true};
@@ -35,10 +26,7 @@ define(['underscore','text!./text.tmpl'], function(_,template) {
     },
 
     initialize: function() {
-      $(window).resize( _.bind(this.resize,this) );
-      this.sandbox.on('wh.change',this.showdef,this);
-      this.sandbox.on('tofind.change',this.showdef,this);
-      
+      this.showdef(this.options.wh);      
     }
   };
 });

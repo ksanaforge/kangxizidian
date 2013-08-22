@@ -1,0 +1,22 @@
+.entry {
+	position: relative;
+}
+.entry .destroy {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	display: none;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	background: url(destroy.png) no-repeat;
+}
+
+
+.entry:hover .destroy {
+  	display: block;
+}
+
+.entry .destroy:hover {
+  	background-position: 0 -20px;
+}
