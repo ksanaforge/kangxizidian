@@ -10,7 +10,7 @@ var juantext='';
 var volno='';
 var convert=[
 	{from:/<頁 n=/g , to:"<pb id="},
-	{from:/<部首-筆畫>/g , to:"<ps>"},
+	{from:/<部首-筆畫>部首-筆畫：(.*?)<\/部首-筆畫>/g , to:'<ps n="$1"/>'},
 	{from:/<\/部首-筆畫>/g , to:"</ps>"},
 	{from:/<字 /g , to:"<wh "},
 	{from:/<\/字>/g , to:"</wh>"},
@@ -82,5 +82,5 @@ var splitfile=function(fn) {
 	}
 	savejuan();
 }
-splitfile('kx-zj(20130813).xml');
+splitfile('kx(20130813).xml');
 
