@@ -2,7 +2,7 @@ define(['underscore','text!./text.tmpl'], function(_,template) {
   return {
     dbname : 'kangxizidian',
     type: 'Backbone',
-    events: {
+    events: { 
       'click .destroy':'closeme'
     },
     closeme:function() {

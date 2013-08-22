@@ -1,6 +1,5 @@
 define(['underscore','text!./texts.tmpl'], function(_,template) {
   return {
-    dbname : 'kangxizidian',
     type: 'Backbone',
     events: {
     },
@@ -8,12 +7,14 @@ define(['underscore','text!./texts.tmpl'], function(_,template) {
     resize:function() {
       var that=this;
       this.$el.css("height", (window.innerHeight - this.$el.offset().top -18) +"px");
+      /*
       this.$el.unbind('scroll');
       this.$el.bind("scroll", function() {
         if (that.$el.scrollTop()+ that.$el.innerHeight()+3> that.$el[0].scrollHeight) {
-          that.loadscreenful();
+          // scroll to bottom
         }
       });
+      */
 
     },    
     showdef:function(wh) {

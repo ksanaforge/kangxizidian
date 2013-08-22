@@ -1,6 +1,6 @@
 define(['underscore','backbone','aura'], function(_,Backbone,Aura) {
  console.log('loading index.js')
-  var app=Aura({debug: { enable: true}});
+  var app=Aura({debug: { enable: false}});
   app.registerWidgetsSource('aura', '../node_webkit/auraext');
 
     app.use('../node_webkit/auraext/aura-backbone')
