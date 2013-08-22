@@ -20,7 +20,7 @@ var convert=[
 	{from:/<\/文>/g , to:"</ch>"},
 	{from:/部首>/g , to:"part>"},
 	{from:/<部首 t="字.">/g , to:"<part>"},
-	{from:/<總筆畫>(.*?) <\/總筆畫>/g , to:'<sc n="$1"/>'},
+	{from:/<總筆畫>總筆畫：(.*?) <\/總筆畫>/g , to:'<sc n="$1"/>'},
 	{from:/<音\/>/g , to:"<ph/>"},
 	{from:/<卷/g , to:"<juan"},
 	{from:/<\/卷>/g , to:"</juan>"},
@@ -82,5 +82,5 @@ var splitfile=function(fn) {
 	}
 	savejuan();
 }
-splitfile('kx(20130410).xml');
+splitfile('kx-zj(20130813).xml');
 
