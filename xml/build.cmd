@@ -1,0 +1,2 @@
+node kangxizidian.js
+pause

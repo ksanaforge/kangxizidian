@@ -11,14 +11,12 @@ define(['underscore','text!./text.tmpl'], function(_,template) {
     },
     imagearrive:function(nimg,Base64) {
       return function(err,data){
-        if (!data) {
-          nimg.attr('src','missingcharacter.png');
-          nimg.removeClass('eudc');
-        } else { //convert to base64
+        if (data) { //convert to base64
           var dataurl= "data:image/png;base64,"+Base64.encode(data)
           nimg.attr('width','5%');
           nimg.attr('height','5%');
           nimg.attr('src',dataurl);
+          nimg.addClass('eudc');
         }
       }
     },
@@ -44,7 +42,7 @@ define(['underscore','text!./text.tmpl'], function(_,template) {
             opts.ntag=data[0].ntag;
             yase.getTextByTag(opts, function(err,data) {
                 var html=_.template(template,data);
-                html=html.replace(/&(.*?);/g,'<img class="eudc" title="$1"/>');
+                html=html.replace(/&(.*?);/g,'<img src="missingcharacter.png" title="$1"/>');
                 that.html(html);
                 that.loadimages.call(that);
             });
