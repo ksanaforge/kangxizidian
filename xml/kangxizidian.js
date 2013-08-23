@@ -12,7 +12,7 @@
 	extra: {
 		decompose: require('./decompose_kangxi.js')
 	},
-	min_yase_version:'0.0.13',
+	min_yase_version:'0.0.16',
 	input:'kangxizidian.lst',
 	output:'../kangxizidian.ydb',
 	author:'chipanwang@gmail.com',

@@ -20,3 +20,9 @@
 .entry .destroy:hover {
   	background-position: 0 -20px;
 }
+img.eudc{
+-webkit-transition:-webkit-transform 0.2s ease-in; 
+}
+img.eudc:hover {
+	-webkit-transform:scale(3);
+}
