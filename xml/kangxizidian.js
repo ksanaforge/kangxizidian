@@ -18,5 +18,6 @@
 	author:'chipanwang@gmail.com',
 	url:'http://www.ksana.tw',
 	version:'0.0.1',
-	 //maxfile:0  //
+	blob: { 'images' : './images'},
+	//maxfile:2  
 }));
