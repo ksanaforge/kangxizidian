@@ -37,7 +37,7 @@ define(['underscore','backbone','text!./candidate.tmpl'], function(_,Backbone,te
       }); 
       this.model.on("change:candidates",this.render,this);
 
-      $(window).resize( _.bind(this.resize,this) );
+      this.$el.resize( _.bind(this.resize,this) );
     }
   };
 });

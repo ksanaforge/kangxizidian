@@ -3,8 +3,9 @@ non visual widget for filtering slot by tofind
 */
 define(['backbone','glyphemesearch'], function(Backbone,glyphemesearch) {
   return {
-    search:function(db,tofind) {
+    search:function(m,tofind) {
     	var that=this,map={};
+      if (!this.db) return;
       if (isNaN(parseInt(tofind))) {
         var paths=[];
         for (var i in tofind) {
@@ -28,7 +29,8 @@ define(['backbone','glyphemesearch'], function(Backbone,glyphemesearch) {
       if (!this.sandbox.minversion('yase','0.0.13')) console.error('yase version too old');
       if (!this.sandbox.minversion('yadb','0.0.9')) console.error('yadb version too old');
       var that=this;
-      this.db=this.options.db|| "kangxizidian";
+      this.db=this.sandbox.dbname;
+
       this.sandbox.on("tofind.change",function(data) {
       	that.model.set({tofind:data})
       });

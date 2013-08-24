@@ -2,8 +2,13 @@ define(['underscore','text!./texts.tmpl'], function(_,template) {
   return {
     type: 'Backbone',
     events: {
+      "click #btnclearall":"clearall"
     },
-    
+    clearall:function() {
+      $('.texts').children().fadeOut(500).promise().then(function() {
+          $('.texts').empty();
+      });
+    },
     resize:function() {
       var that=this;
       this.$el.css("height", (window.innerHeight - this.$el.offset().top -18) +"px");
@@ -18,11 +23,11 @@ define(['underscore','text!./texts.tmpl'], function(_,template) {
 
     },    
     showdef:function(wh) {
-      var exists=$("div[data-wh="+wh+"]");
+      var exists=$('div[data-wh="'+wh+'"]');
       if (exists.length) {
         this.$el.animate({scrollTop: exists.offset().top })
       } else {
-        var dom=this.$el.prepend('<div data-aura-widget="text-widget" data-wh="'+wh+'"></div>');
+        var dom=this.$el.find(".texts").prepend('<div data-aura-widget="text-widget" data-wh="'+wh+'"></div>');
         this.sandbox.start(dom);
         this.$el.animate({scrollTop: 0 })
       }
