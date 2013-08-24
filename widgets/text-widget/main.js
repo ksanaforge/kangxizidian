@@ -26,7 +26,9 @@ define(['underscore','text!./text.tmpl'], function(_,template) {
       for (var i=0;i<images.length;i++) {
         $img=$(images[i]);
         var yase=this.sandbox.yase;
-        var blobpath='images/'+$img.attr("title")+'.png';
+        var fn=$img.attr("title").substring(1); //remove &
+        fn=fn.substring(0,fn.length-1);//remove ;
+        var blobpath='images/'+fn+'.png';
         yase.getBlob({db:this.dbname, blob:blobpath}, 
           this.imagearrive($img,this.sandbox.Base64));
       }
@@ -42,7 +44,7 @@ define(['underscore','text!./text.tmpl'], function(_,template) {
             opts.ntag=data[0].ntag;
             yase.getTextByTag(opts, function(err,data) {
                 var html=_.template(template,data);
-                html=html.replace(/&(.*?);/g,'<img src="missingcharacter.png" title="$1"/>');
+                html=html.replace(/(&.*?;)/g,'<img src="missingcharacter.png" title="$1"/>');
                 that.html(html);
                 that.loadimages.call(that);
             });
