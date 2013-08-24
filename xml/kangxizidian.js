@@ -1,5 +1,5 @@
 ﻿console.log(require('yase').build({
-	dbid:'kangzidian',
+	dbid:'kangxizidian',
 	blockshift:7,
 	schema:function() {
 		this.toctag(["wh"])
@@ -17,7 +17,7 @@
 	output:'../kangxizidian.ydb',
 	author:'chipanwang@gmail.com',
 	url:'http://www.ksana.tw',
-	version:'0.0.1',
+	version:'0.0.2',
 	blob: { 'images' : './images'},
 	//maxfile:2  
 }));
