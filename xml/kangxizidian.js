@@ -5,7 +5,8 @@
 		this.toctag(["wh"])
 		      .emptytag("pb").attr("pb","id",{"depth":1})
 		      .emptytag("sc").attr("sc","n",{"depth":1,"allowrepeat":true})
-		      .emptytag("d").emptytag("ph")
+		      .emptytag(["d","ph"])
+		      .newslot(["d","ph","zy"])
 		      .attr("detshen","tid",{"depth":3,"allowrepeat":false})
 			  .attr("xml","src",{"allowrepeat":false})
 	},
@@ -19,5 +20,5 @@
 	url:'http://www.ksana.tw',
 	version:'0.0.2',
 	blob: { 'images' : './images'},
-	//maxfile:2  
+	//maxfile:3
 }));

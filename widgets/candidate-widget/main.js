@@ -1,4 +1,5 @@
-define(['underscore','backbone','text!./candidate.tmpl'], function(_,Backbone,template) {
+define(['underscore','backbone','text!./candidate.tmpl','text!./item.tmpl'], 
+  function(_,Backbone,template,itemtemplate) {
   return {
     type: 'Backbone',
     events: {
@@ -10,11 +11,29 @@ define(['underscore','backbone','text!./candidate.tmpl'], function(_,Backbone,te
       this.$el.unbind('scroll');
       this.$el.bind("scroll", function() {
         if (that.$el.scrollTop()+ that.$el.innerHeight()+3> that.$el[0].scrollHeight) {
-          //that.loadscreenful();
+          that.loadscreenful();
         }
       });
 
-    },     
+    },
+    loadscreenful:function() {
+     var candidates=this.model.get("candidates");
+
+      var screenheight=this.$el.innerHeight();
+      var $candidates=$(".candidates");
+      var startheight=$candidates.height();
+      if (this.displayed>=candidates.length) return;
+      var now=this.displayed||0;
+      var H=0,outputheight=0;
+      for (var i=now;i<candidates.length;i++ ) {
+        var newitem=_.template(itemtemplate,{name:candidates[i]});
+        //protect kxr in tag
+
+        $candidates.append(newitem); // this is slow  to get newitem height()
+        if (i-now>100) break;
+      }
+      this.displayed=i+1;
+    },
     whclick:function(e) {
       var btn=$(e.target);
       this.sandbox.emit("wh.change",btn.text());
@@ -24,6 +43,7 @@ define(['underscore','backbone','text!./candidate.tmpl'], function(_,Backbone,te
       var tofind=this.model.get("tofind");
       var candidates=this.model.get("candidates");
       this.html(_.template(template,{ candidates:candidates, tofind:tofind}) );
+      this.loadscreenful();
     },
     model: new Backbone.Model(),
   
