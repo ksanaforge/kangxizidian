@@ -43,6 +43,7 @@ define(['underscore','backbone','text!./candidate.tmpl','text!./item.tmpl'],
       var tofind=this.model.get("tofind");
       var candidates=this.model.get("candidates");
       this.html(_.template(template,{ candidates:candidates, tofind:tofind}) );
+      this.displayed=0;
       this.loadscreenful();
     },
     model: new Backbone.Model(),
