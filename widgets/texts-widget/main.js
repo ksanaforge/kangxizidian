@@ -5,7 +5,7 @@ define(['underscore','text!./texts.tmpl'], function(_,template) {
       "click #btnclearall":"clearall",
       "click #btncopy":"copy",
     },
-    copy:function() {
+    copy:function(e) {
       var gui = require('nw.gui');
 
       // We can not create a clipboard, we have to receive the system clipboard
@@ -13,6 +13,12 @@ define(['underscore','text!./texts.tmpl'], function(_,template) {
       // Or write something
       var sel=window.rangy.getSelection().getRangeAt(0).toString();
       clipboard.set(sel, 'text');
+      var oldlabel=$("#btncopy").html();
+      $("#btncopy").html('Copies!!');
+      setTimeout( function() {
+        $("#btncopy").html(oldlabel)
+      },2000);
+
     },
     clearall:function() {
       $('.texts').children().fadeOut(500).promise().then(function() {
