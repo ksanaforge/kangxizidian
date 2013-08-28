@@ -22,12 +22,12 @@ define(['underscore','text!./texts.tmpl'], function(_,template) {
       */
 
     },    
-    showdef:function(wh) {
+    showdef:function(wh,tofind) {
       var exists=$('div[data-wh="'+wh+'"]');
       if (exists.length) {
         this.$el.animate({scrollTop: exists.offset().top })
       } else {
-        var dom=this.$el.find(".texts").prepend('<div data-aura-widget="text-widget" data-wh="'+wh+'"></div>');
+        var dom=this.$el.find(".texts").prepend('<div data-aura-widget="text-widget" data-wh="'+wh+'" data-tofind="'+tofind+'"></div>');
         this.sandbox.start(dom);
         this.$el.animate({scrollTop: 0 })
       }
@@ -41,7 +41,7 @@ define(['underscore','text!./texts.tmpl'], function(_,template) {
       this.resize();
       this.render();
       this.sandbox.on('wh.change',this.showdef,this);
-      this.sandbox.on('tofind.change',this.showdef,this);
+      //this.sandbox.on('tofind.change',this.showdef,this);
     }
   };
 });

@@ -21,7 +21,7 @@ define(['underscore','backbone','text!./result.tmpl','text!./item.tmpl'],
      // $(e.target).addClass('active');
       if (e.target.tagName!=="A") e.target=e.target.parentElement;
       $e=$(e.target);
-      this.sandbox.emit("wh.change", $e.data("wh")) ;
+      this.sandbox.emit("wh.change", $e.data("wh"),this.model.get("tofind")) ;
     },
     loadscreenful:function() {
       var res=this.model.get("res");

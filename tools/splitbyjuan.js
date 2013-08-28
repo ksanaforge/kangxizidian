@@ -77,7 +77,7 @@ var splitfile=function(fn) {
 			if (lastjuan) savejuan();
 			lastjuan=arr[i].match(/.*? n="(.*?)"/)[1];
 		}
-		volno=parseInt(fn);	
+		volno=parseInt(fn,10);	
 		juantext.push(arr[i]);
 	}
 	savejuan();

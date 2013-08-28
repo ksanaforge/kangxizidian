@@ -6,7 +6,7 @@ define(['backbone','glyphemesearch'], function(Backbone,glyphemesearch) {
     search:function(m,tofind) {
     	var that=this,map={};
       if (!this.db) return;
-      if (isNaN(parseInt(tofind))) {
+      if (isNaN(parseInt(tofind,10))) {
         var paths=[];
         for (var i in tofind) {
           paths.push( (this.db+'/extra/decompose/'+tofind[i]).split('/'));
@@ -19,7 +19,7 @@ define(['backbone','glyphemesearch'], function(Backbone,glyphemesearch) {
           that.sandbox.emit("characterlist.change",res);
       	});
       } else {
-        var res=glyphemesearch.withstroke(parseInt(tofind));
+        var res=glyphemesearch.withstroke(parseInt(tofind,10));
         this.sandbox.emit("characterlist.change",res);
       }
     },
