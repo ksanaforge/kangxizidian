@@ -3,7 +3,7 @@
 	blockshift:7,
 	schema:function() {
 		this.toctag(["wh"])
-		      .emptytag("pb").attr("pb","id",{"depth":1})
+		      .emptytag("pb").attr("pb","id",{"depth":1,"saveval":true})
 		      .emptytag("sc").attr("sc","n",{"depth":1,"allowrepeat":true})
 		      .emptytag(["d","ph"])
 		      .newslot(["d","ph","zy"])

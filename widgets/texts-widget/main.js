@@ -43,8 +43,10 @@ define(['underscore','text!./texts.tmpl'], function(_,template) {
       if (exists.length) {
         this.$el.animate({scrollTop: exists.offset().top })
       } else {
-        var dom=this.$el.find(".texts").prepend('<div data-aura-widget="text-widget" data-wh="'+wh+'" data-tofind="'+tofind+'"></div>');
-        this.sandbox.start(dom);
+        var textdom=$('<div><div data-aura-widget="text-widget" data-wh="'+wh+'" data-tofind="'+tofind+'"></div></div>');
+        var dom=this.$el.find(".texts").prepend(textdom);
+        this.sandbox.start(textdom);
+        //this.sandbox.widgets.start('text-widget',textdom);
         this.$el.animate({scrollTop: 0 })
       }
     },
