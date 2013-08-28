@@ -2,7 +2,17 @@ define(['underscore','text!./texts.tmpl'], function(_,template) {
   return {
     type: 'Backbone',
     events: {
-      "click #btnclearall":"clearall"
+      "click #btnclearall":"clearall",
+      "click #btncopy":"copy",
+    },
+    copy:function() {
+      var gui = require('nw.gui');
+
+      // We can not create a clipboard, we have to receive the system clipboard
+      var clipboard = gui.Clipboard.get();
+      // Or write something
+      var sel=window.rangy.getSelection().getRangeAt(0).toString();
+      clipboard.set(sel, 'text');
     },
     clearall:function() {
       $('.texts').children().fadeOut(500).promise().then(function() {
