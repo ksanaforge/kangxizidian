@@ -26,9 +26,12 @@ define(['backbone','glyphemesearch'], function(Backbone,glyphemesearch) {
 
     model:new Backbone.Model(),
     initialize: function() {;
-      if (!this.sandbox.minversion('yase','0.0.13')) console.error('yase version too old');
-      if (!this.sandbox.minversion('yadb','0.0.9')) console.error('yadb version too old');
       var that=this;
+      setTimeout(function(){ //this is not good, but server mode response is slower than client code initialization
+        if (!that.sandbox.minversion('yase','0.0.13')) console.error('yase version too old');
+        if (!that.sandbox.minversion('yadb','0.0.9')) console.error('yadb version too old');
+      },5000)
+
       this.db=this.sandbox.dbname;
 
       this.sandbox.on("tofind.change",function(data) {
