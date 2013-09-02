@@ -25,6 +25,7 @@ define(['underscore','text!./text.tmpl'], function(_,template) {
             yase.getTextByTag(opts, function(err,data2) {
                 var html=_.template(template,data2);
                 html=html.replace(/(&.*?;)/g,'<img src="missingcharacter.png" title="$1"/>');
+                html=html.replace(/<note n="(.*)"\/>/g,'<span class="note" data-toggle="tooltip" title="$1"/>')
                 that.html(html);
                 that.sandbox.loadimages.apply(that,[that.$el]);
 

@@ -8,3 +8,5 @@ zh {color: brown}
 t {font-size:150%;}
 ph:before { content: url("ph.png")}
 d:before { content: url("def.png")}
+.note {border:1px solid; border-radius:3px;}
+.note:before {content:"編案"};

@@ -59,7 +59,7 @@ define(['underscore','text!./texts.tmpl'], function(_,template) {
       this.resize();
       this.render();
       this.sandbox.on('wh.change',this.showdef,this);
-      //this.sandbox.on('tofind.change',this.showdef,this);
+      this.sandbox.on('tofind.change',this.showdef,this);
     }
   };
 });

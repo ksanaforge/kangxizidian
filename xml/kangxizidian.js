@@ -7,7 +7,6 @@
 		      .emptytag("sc").attr("sc","n",{"depth":1,"allowrepeat":true})
 		      .emptytag(["d","ph"])
 		      .newslot(["d","ph","zy"])
-		      .attr("detshen","tid",{"depth":3,"allowrepeat":false})
 			  .attr("xml","src",{"allowrepeat":false})
 	},
 	extra: {
@@ -19,6 +18,7 @@
 	author:'chipanwang@gmail.com',
 	url:'http://www.ksana.tw',
 	version:'0.0.2',
+	outputencoding:'ucs2',
 	blob: { 'images' : './images'},
-	//maxfile:3
+	//maxfile:1
 }));

@@ -26,6 +26,7 @@ var convert=[
 	{from:/<\/卷>/g , to:"</juan>"},
 
 	{from:/<例\/>/g , to:"<d/>"},
+	{from:/<注 /g , to:"<note "},
 	{from:/內文>/g , to:"t>"},
 ]
 var lastpage="";
