@@ -4,9 +4,13 @@ hl {color:red;}
 wh {font-size:300%;color:blue;}
 smallwh {font-size:200%;color:brown;border-radius: 4px; border: 1px solid #800000;}
 sc:before {content: "總筆劃:" attr(n) }
+ps:before {content: attr(n) }
 zh {color: brown}  
 t {font-size:150%;}
 ph:before { content: url("ph.png")}
 d:before { content: url("def.png")}
 .note {border:1px solid; border-radius:3px;}
 .note:before {content:"編案"};
+
+py:before {content:"拼音："}
+zy:before {content:"注音："}
