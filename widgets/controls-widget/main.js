@@ -6,8 +6,12 @@ define(['underscore','text!./controls.tmpl'], function(_,template) {
       "click #btncopy":"copy",
     },
     copy:function(e) {
-      var gui = require('nw.gui');
 
+      var gui = require('nw.gui');
+      if (gui) {
+        bootbox.alert("only node-webkit supports copy-to-clipboard<br>use ctrl+c or right-click menu",function(){})
+        return;
+      }
       // We can not create a clipboard, we have to receive the system clipboard
       var clipboard = gui.Clipboard.get();
       // Or write something
