@@ -1,19 +1,28 @@
 /*
 non visual widget for filtering slot by tofind
 */
-define(['backbone','glyphemesearch'], function(Backbone,glyphemesearch) {
+define(['backbone','glyphemesearch','radicalvariants'], 
+  function(Backbone,glyphemesearch,radicalvariants) {
   return {
     search:function(m,tofind) {
     	var that=this,map={};
       if (!this.db) return;
       if (isNaN(parseInt(tofind,10))) {
-        var paths=[];
+        var paths=[], expanded=[];
+
         for (var i in tofind) {
           paths.push( (this.db+'/extra/decompose/'+tofind[i]).split('/'));
+          //load variants of the parts
+          var v=radicalvariants[tofind[i]];
+          for (var j in v) {
+              paths.push( (this.db+'/extra/decompose/'+v[j]).split('/'));
+              expanded.push(v[j])
+          }
+          expanded.push(tofind[i]);
         }
       	this.sandbox.yadb.getRaw(paths,function(err,data) {
-          for (var i=0;i<tofind.length;i++) {
-            map[tofind[i]]=data[i];
+          for (var i=0;i<expanded.length;i++) {
+            map[expanded[i]]=data[i];
           }
           var res=glyphemesearch(map,tofind);
           that.sandbox.emit("characterlist.change",res);
