@@ -45,7 +45,9 @@ define(['underscore','pinyin','text!./text.tmpl'],
 
                 opts.attr="id";opts.tag="pb";opts.ntag=data[0][1].ntag;
                 yase.getTagAttr(opts,function(err,data3){
-                  $("#pagenumber").html(data3);
+                  var wid=that.$el.find("wh").attr("wid");
+                  that.$el.find("#pagenumber").html(data3);
+                  that.$el.find("#wid").html(wid);
                 })
 
             });
