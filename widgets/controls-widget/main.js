@@ -8,7 +8,7 @@ define(['underscore','text!./controls.tmpl'], function(_,template) {
     copy:function(e) {
 
       var gui = require('nw.gui');
-      if (gui) {
+      if (!gui) {
         bootbox.alert("only node-webkit supports copy-to-clipboard<br>use ctrl+c or right-click menu",function(){})
         return;
       }
