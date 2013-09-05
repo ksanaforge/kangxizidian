@@ -2,40 +2,10 @@ define(['underscore','text!./texts.tmpl'], function(_,template) {
   return {
     type: 'Backbone',
     events: {
-      "click #btnclearall":"clearall",
-      "click #btncopy":"copy",
-    },
-    copy:function(e) {
-      var gui = require('nw.gui');
-
-      // We can not create a clipboard, we have to receive the system clipboard
-      var clipboard = gui.Clipboard.get();
-      // Or write something
-      var sel=window.rangy.getSelection().getRangeAt(0).toString();
-      clipboard.set(sel, 'text');
-      var oldlabel=$("#btncopy").html();
-      $("#btncopy").html('Copies!!');
-      setTimeout( function() {
-        $("#btncopy").html(oldlabel)
-      },2000);
-
-    },
-    clearall:function() {
-      $('.texts').children().fadeOut(500).promise().then(function() {
-          $('.texts').empty();
-      });
     },
     resize:function() {
       var that=this;
       this.$el.css("height", (window.innerHeight - this.$el.offset().top -18) +"px");
-      /*
-      this.$el.unbind('scroll');
-      this.$el.bind("scroll", function() {
-        if (that.$el.scrollTop()+ that.$el.innerHeight()+3> that.$el[0].scrollHeight) {
-          // scroll to bottom
-        }
-      });
-      */
 
     },    
     showdef:function(wh,tofind) {
