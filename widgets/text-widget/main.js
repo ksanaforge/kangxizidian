@@ -14,10 +14,12 @@ define(['underscore','pinyin','text!./text.tmpl'],
       $zy=this.$el.find("zy");
       if (!$zy.length)return;
       var zy=$zy.html().replace('注音：','').split(',');
-      $zy= $zy.before("<span>拼音：</span>");
+      var py=[];
       zy.map( function(k) {
-        $zy=$zy.before("<py>"+pinyin.fromzhuyin(k)+"<py>,");
+        py.push(pinyin.fromzhuyin(k));
       });
+      $zy.after("<py>"+py.join(",")+"</py>");
+
     },
     showdef:function(wh) {
       if (!this.db) return;
