@@ -3,7 +3,7 @@ hl {color:red;}
 .pagetext {}
 wh {font-size:300%;color:blue;}
 smallwh {font-size:200%;color:brown;border-radius: 4px; border: 1px solid #800000;}
-sc:before {content: "總筆畫:" attr(n) }
+sc:before {content: "總筆劃:" attr(n) }
 ps:before {content: attr(n) }
 zh {color: brown}  
 t {font-size:150%;}
