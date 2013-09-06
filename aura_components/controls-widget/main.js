@@ -59,6 +59,11 @@
    
     render:function() {
       this.html(_.template(template,{}));
+      if (typeof process=='undefined') {
+        console.log("hiding buttons")
+        $("#btncopy").hide();
+        $("#btnexcerptcopy").hide();
+      }
     },
 
     initialize: function() {
