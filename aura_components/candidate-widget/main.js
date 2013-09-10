@@ -18,9 +18,9 @@ define(['underscore','backbone','text!./candidate.tmpl','text!./item.tmpl'],
     },
     loadscreenful:function() {
      var candidates=this.model.get("candidates");
-
+     if (!candidates) return null;
       var screenheight=this.$el.innerHeight();
-      var $candidates=$(".candidates");
+      var $candidates=this.$el.find(".candidates");
       var startheight=$candidates.height();
       if (this.displayed>=candidates.length) return;
       var now=this.displayed||0;
