@@ -8,6 +8,7 @@
 		      .emptytag(["d","ph"])
 		      .newslot(["d","ph","zy"])
 			  .attr("xml","src",{"allowrepeat":false,"saveval":true})
+			  .attr("wh","wid",{"allowrepeat":true,"saveval":true})			  
 	},
 	extra: {
 		decompose: require('./decompose_kangxi.js')
