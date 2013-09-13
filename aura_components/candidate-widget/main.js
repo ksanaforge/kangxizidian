@@ -25,18 +25,22 @@ define(['underscore','backbone','text!./candidate.tmpl','text!./item.tmpl'],
       if (this.displayed>=candidates.length) return;
       var now=this.displayed||0;
       var H=0,outputheight=0;
-      for (var i=now;i<candidates.length;i++ ) {
-        var newitem=_.template(itemtemplate,{name:candidates[i]});
-        //protect kxr in tag
 
+      for (var i=now;i<candidates.length;i++ ) {
+        var newitem=_.template(itemtemplate,{wh:candidates[i]});
+        //protect kxr in tag
+        newitem=this.sandbox.dgg.tagify(newitem);
         $candidates.append(newitem); // this is slow  to get newitem height()
         if (i-now>100) break;
       }
+      this.sandbox.dgg.loadglyphs.apply(this,[ $candidates]);
+      $candidates.find(".glyphwiki").removeClass("glyphwiki");
+
       this.displayed=i+1;
     },
     whclick:function(e) {
       var btn=$(e.target);
-      this.sandbox.emit("wh.change",btn.text());
+      this.sandbox.emit("wh.change",btn.text() || btn.attr("title"));
     },
     render:function() {
       this.resize();
@@ -51,6 +55,10 @@ define(['underscore','backbone','text!./candidate.tmpl','text!./item.tmpl'],
     initialize: function() {
       var that=this;
       this.sandbox.on('characterlist.change',function(data){
+        for (var i=0;i<data.length;i++ ) { //convert to widestring
+          data[i]=that.sandbox.cjkutil.ucs2string(data[i]);
+        }
+
         that.model.set({"candidates":data});
       });
       this.sandbox.on('tofind.change',function(data){
