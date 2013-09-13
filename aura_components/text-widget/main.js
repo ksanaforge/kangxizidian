@@ -43,18 +43,19 @@ define(['underscore','text!./text.tmpl'],
                 html=that.sandbox.dgg.tagify(html);
                 that.html(html);
  
-                that.addpinyin();
 
                 that.sandbox.loadimages.apply(that,[that.$el]);
 
-                that.sandbox.dgg.loadglyphs.apply(that,[that.$el]);
-
                 opts.attr="id";opts.tag="pb";opts.ntag=data[0][1].ntag;
-                yase.getTagAttr(opts,function(err,data3){
+                yase.getTagAttr(opts,function(err,pn){
                   var wid=that.$el.find("wh").attr("wid");
-                  that.$el.find("#pagenumber").html(data3);
+                  that.$el.find("#pagenumber").html(pn);
                   that.$el.find("#wid").html(wid);
                 })
+
+                that.addpinyin();
+                that.sandbox.dgg.loadglyphs.apply(that,[that.$el]);
+
 
             });
 
