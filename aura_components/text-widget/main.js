@@ -40,10 +40,14 @@ define(['underscore','text!./text.tmpl'],
                 html=html.replace(/(&.*?;)/g,'<img src="missingcharacter.png" title="$1"/>');
                 html=html.replace(/<note n="(.*)"\/>/g,'<span class="note" data-toggle="tooltip" title="$1"/>');
 
+                html=that.sandbox.dgg.tagify(html);
                 that.html(html);
+ 
                 that.addpinyin();
+
                 that.sandbox.loadimages.apply(that,[that.$el]);
 
+                that.sandbox.dgg.loadglyphs.apply(that,[that.$el]);
 
                 opts.attr="id";opts.tag="pb";opts.ntag=data[0][1].ntag;
                 yase.getTagAttr(opts,function(err,data3){
