@@ -1,5 +1,5 @@
-define(['underscore','pinyin','text!./text.tmpl'], 
-  function(_,pinyin,template) {
+define(['underscore','text!./text.tmpl'], 
+  function(_,template) {
   return {
     //dbname : 'kangxizidian',
     type: 'Backbone',
@@ -11,12 +11,13 @@ define(['underscore','pinyin','text!./text.tmpl'],
       $el.hide('slow', function(){ $el.remove(); });
     },
     addpinyin:function() {
+      var that=this;
       $zy=this.$el.find("zy");
       if (!$zy.length)return;
       var zy=$zy.html().replace('注音：','').split(',');
       var py=[];
       zy.map( function(k) {
-        py.push(pinyin.fromzhuyin(k));
+        py.push(that.sandbox.pinyin.fromzhuyin(k));
       });
       $zy.after("<py>"+py.join(",")+"</py>");
 

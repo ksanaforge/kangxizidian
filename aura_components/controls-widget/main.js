@@ -52,7 +52,7 @@
 
     },
     clearall:function() {
-      $('.texts').children().fadeOut(500).promise().then(function() {
+      $('.texts').children().fadeOut(300).promise().then(function() {
           $('.texts').empty();
       });
     },

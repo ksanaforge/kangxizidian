@@ -1,8 +1,7 @@
 /*
 non visual widget for filtering slot by tofind
 */
-define(['backbone','glyphemesearch','radicalvariants'], 
-  function(Backbone,glyphemesearch,radicalvariants) {
+define(['backbone'], function(Backbone) {
   return {
     search:function(m,tofind) {
     	var that=this,map={};
@@ -13,7 +12,7 @@ define(['backbone','glyphemesearch','radicalvariants'],
         for (var i in tofind) {
           paths.push( (this.db+'/extra/decompose/'+tofind[i]).split('/'));
           //load variants of the parts
-          var v=radicalvariants[tofind[i]];
+          var v=this.sandbox.radicalvariants[tofind[i]];
           for (var j in v) {
               paths.push( (this.db+'/extra/decompose/'+v[j]).split('/'));
               expanded.push(v[j])
@@ -24,11 +23,11 @@ define(['backbone','glyphemesearch','radicalvariants'],
           for (var i=0;i<expanded.length;i++) {
             map[expanded[i]]=data[i];
           }
-          var res=glyphemesearch(map,tofind);
+          var res=that.sandbox.glyphemesearch(map,tofind);
           that.sandbox.emit("characterlist.change",res);
       	});
       } else {
-        var res=glyphemesearch.withstroke(parseInt(tofind,10));
+        var res=this.sandbox.glyphemesearch.withstroke(parseInt(tofind,10));
         this.sandbox.emit("characterlist.change",res);
       }
     },
