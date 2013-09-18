@@ -27,6 +27,10 @@
       var params={};
       var wh=div.find("wh");
       params.wh=wh.html();
+      if (params.wh.indexOf('<img')>-1) {
+        var t=params.wh.match(/title="(.*?)"/);
+        if (t) params.wh=t[1];
+      }
       params.wid=parseInt(wh.attr("wid"));
       params.pagenumber=parseInt(div.parent().find("#pagenumber").html());
       var origin=_.template(origin_template,params);
