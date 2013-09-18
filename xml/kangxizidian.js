@@ -1,6 +1,6 @@
 ﻿console.log(require('yase').build({
 	dbid:'kangxizidian',
-	blockshift:7,
+	slotshift:7,
 	schema:function() {
 		this.toctag(["wh","xml"])
 		      .emptytag("pb").attr("pb","id",{"depth":1,"saveval":true})
