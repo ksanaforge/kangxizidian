@@ -34,8 +34,10 @@ define(['underscore','text!./text.tmpl'],
           ,function(err,data){
             opts.ntag=data[0][0].ntag;
             opts.tofind=that.tofind;
+            opts.sourceinfo=true;
             //TODO pass in tofind and  highlight
             yase.getTextByTag(opts, function(err,data2) {
+
                 var html=_.template(template,data2);
                 html=html.replace(/(&.*?;)/g,'<img src="missingcharacter.png" title="$1"/>');
                 html=html.replace(/<note n="(.*)"\/>/g,'<span class="note" data-toggle="tooltip" title="$1"/>');

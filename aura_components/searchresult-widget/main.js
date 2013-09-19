@@ -57,7 +57,7 @@ define(['underscore','backbone','text!./result.tmpl','text!./item.tmpl'],
     },
     dosearch:function(tofind) {
       var yase=this.sandbox.yase;
-      var opts={db:this.db,showtext:true,closesttag:"wh",highlight:true,tofind:tofind};
+      var opts={db:this.db,showtext:true,sourceinfo:true,closesttag:"wh",highlight:true,tofind:tofind};
       this.model.set({tofind:tofind});
       var that=this;
       yase.phraseSearch(opts,function(err,data) {
