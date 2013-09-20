@@ -7,9 +7,9 @@
 		"kangxizidian/index.js",
 		"kangxizidian/index.html",
 		"kangxizidian/package.json",
-		"kangxizidian/xml/decompose_kangxi.js",
 		"kangxizidian/LICENSE",
 		"kangxizidian/README.md"
+		"glyphwiki/glyphwiki.ydb",
 	],
 	"osx" :[
 		"kangxizidian/run.command"
