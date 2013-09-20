@@ -1,0 +1,20 @@
+{
+	"files":[
+		"node_modules/refinery",
+		"kangxizidian/aura_components",
+		"kangxizidian/css",
+		"kangxizidian/kangxizidian.ydb",
+		"kangxizidian/index.js",
+		"kangxizidian/index.html",
+		"kangxizidian/package.json",
+		"kangxizidian/xml/decompose_kangxi.js",
+		"kangxizidian/LICENSE",
+		"kangxizidian/README.md"
+	],
+	"osx" :[
+		"kangxizidian/run.command"
+	],
+	"win32" :[
+		"kangxizidian/run.cmd"
+	]	
+}
