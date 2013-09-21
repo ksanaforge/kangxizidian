@@ -8,8 +8,8 @@
 		"kangxizidian/index.html",
 		"kangxizidian/package.json",
 		"kangxizidian/LICENSE",
-		"kangxizidian/README.md"
-		"glyphwiki/glyphwiki.ydb",
+		"kangxizidian/README.md",
+		"glyphwiki/glyphwiki.ydb"
 	],
 	"osx" :[
 		"kangxizidian/run.command"
