@@ -16,4 +16,4 @@ you will get kangxizidian.ydb , which is about 25MB
 
 ##All-in-one zip for windows
 download and extract to a new folder, double click on kangxizidian/run.cmd
-http://ya.ksana.tw/kangxizidian/kangxizidian-win32-2013-09-20.zip
+http://ya.ksana.tw/kangxizidian/kangxizidian-win32-2013-09-21.zip
