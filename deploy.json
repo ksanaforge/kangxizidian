@@ -11,7 +11,7 @@
 		"kangxizidian/README.md",
 		"glyphwiki/glyphwiki.ydb"
 	],
-	"osx" :[
+	"darwin" :[
 		"kangxizidian/run.command"
 	],
 	"win32" :[
