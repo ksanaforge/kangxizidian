@@ -1,5 +1,5 @@
-define(['underscore','backbone','text!./result.tmpl','text!./item.tmpl'], 
-  function(_,Backbone,template,itemtemplate) {
+define(['underscore','backbone','text!./result.tmpl','text!./item.tmpl','text!./notfound.tmpl'], 
+  function(_,Backbone,template,itemtemplate,notfoundtemplate) {
   return {
     type: 'Backbone',
     events: {
@@ -39,7 +39,10 @@ define(['underscore','backbone','text!./result.tmpl','text!./item.tmpl'],
       this.resize();
       var tofind=this.model.get("tofind");
       var pbcandidates=this.model.get("pbcandidates");
-      if (!pbcandidates) return null;
+      if (!pbcandidates.length) {
+        this.html(notfoundtemplate);
+        return;
+      };
       this.html(_.template(template,{ candidates:pbcandidates}) );
       this.displayed=0;
       if (pbcandidates.length) {
@@ -76,6 +79,7 @@ define(['underscore','backbone','text!./result.tmpl','text!./item.tmpl'],
                 }
               }
               that.model.set("pbcandidates",pbcandidates);
+              if (!pbcandidates.length) that.render();
           });
       })
     },
