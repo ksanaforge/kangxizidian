@@ -39,13 +39,13 @@ define(['underscore','backbone','text!./result.tmpl','text!./item.tmpl','text!./
       this.resize();
       var tofind=this.model.get("tofind");
       var pbcandidates=this.model.get("pbcandidates");
-      if (!pbcandidates.length) {
+      if (pbcandidates && !pbcandidates.length) {
         this.html(notfoundtemplate);
         return;
       };
       this.html(_.template(template,{ candidates:pbcandidates}) );
       this.displayed=0;
-      if (pbcandidates.length) {
+      if (pbcandidates&&pbcandidates.length) {
         this.$el.find(".pbcandidates").html("");
         this.loadscreenful();
       }
