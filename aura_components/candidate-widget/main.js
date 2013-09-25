@@ -40,7 +40,8 @@ define(['underscore','backbone','text!./candidate.tmpl','text!./item.tmpl'],
     },
     whclick:function(e) {
       var btn=$(e.target);
-      this.sandbox.emit("wh.change",btn.text() || btn.attr("title"));
+
+      this.sandbox.emit("wh.change",btn.text() || btn.find("img").attr("title") || btn.attr("title"));
     },
     render:function() {
       this.resize();

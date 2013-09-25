@@ -1,9 +1,15 @@
 .candidate {font-size:150%;}
-hl {color:red;}
-.pagetext {}
-wh {font-size:300%;color:blue;}
-smallwh {font-size:200%;color:brown;border-radius: 4px; border: 1px solid #800000;}
-sc:before {content: "總筆畫:" attr(n) }
+hl {color:red;background:yellow;}
+wh {margin-left:50px;border-width:1px;
+	border-style:solid;border-color:silver;
+	font-size:5em;font-family: DFKai-SB}
+
+smallwh {font-size:200%;color:brown;border-radius: 4px;
+ border: 1px solid #800000;}
+t {white-space: pre-wrap;}
+.pinyin {font-size:150%;color:#357ebd}
+sc:before, py:before, zy:before {content:}
+sc:before {content: "\A總筆畫:" attr(n) ; white-space: pre-wrap;}
 ps:before {content: attr(n) }
 zh {color: brown}  
 t {font-size:150%;}
@@ -12,6 +18,6 @@ d:before { content: url("def.png")}
 .note {border:1px solid; border-radius:3px;}
 .note:before {content:"編案"}
 
-py:before {content:"∥拼音："}
-zy:before {content:"∥注音："}
+py:before {content:"\A拼音：";white-space: pre-wrap;}
+zy:before {content:"\A注音：";white-space: pre-wrap;}
 an:before{content:"古文："}

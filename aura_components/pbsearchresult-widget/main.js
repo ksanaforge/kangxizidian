@@ -15,43 +15,37 @@ define(['underscore','backbone','text!./result.tmpl','text!./item.tmpl','text!./
         }
       });
     },
-    loadscreenful:function() {
-      var candidates=this.model.get("pbcandidates");
-      if (!candidates) return null;
-      var screenheight=this.$el.innerHeight();
-      var $candidates=this.$el.find(".pbcandidates");
-      var startheight=$candidates.height();
-      if (this.displayed>=candidates.length) return;
-      var now=this.displayed||0;
-      var H=0,outputheight=0;
-      for (var i=now;i<candidates.length;i++ ) {
-        var newitem=_.template(itemtemplate,{wh:candidates[i]});
-        $candidates.append(newitem); // this is slow  to get newitem height()
-        if (i-now>100) break;
-      }
-      this.displayed=i+1;
-    },
     whclick:function(e) {
       var btn=$(e.target);
-      this.sandbox.emit("wh.change",btn.text());
+      this.sandbox.emit("wh.change",btn.text() ||btn.find("img").attr("title") || btn.attr("title"));
     },
     render:function() {
       this.resize();
       var tofind=this.model.get("tofind");
-      var pbcandidates=this.model.get("pbcandidates");
-      if (pbcandidates && !pbcandidates.length) {
+      var candidates=this.model.get("pbcandidates");
+      if (candidates && !candidates.length) {
         this.html(notfoundtemplate);
         return;
       };
-      this.html(_.template(template,{ candidates:pbcandidates}) );
-      this.displayed=0;
-      if (pbcandidates&&pbcandidates.length) {
-        this.$el.find(".pbcandidates").html("");
-        this.loadscreenful();
+      this.html(template);
+      if (!candidates) return;
+
+      var screenheight=this.$el.innerHeight();
+      var $candidates=this.$el.find(".pbcandidates");
+      for (var i=0;i<candidates.length;i++ ) {
+        var newitem=_.template(itemtemplate,{wh:candidates[i]});
+        newitem=this.sandbox.dgg.tagify(newitem);
+        $candidates.append(newitem); // this is slow  to get newitem height()
       }
+      this.sandbox.dgg.loadglyphs.apply(this,[ $candidates]);
+      $candidates.find(".glyphwiki").removeClass("glyphwiki");
       
     },
     findpbwid:function(tofind) {
+      if (!tofind) {
+        this.model.set("pbcandidates",undefined);
+        return;
+      }      
       var pbwid=tofind.split('.');
       pbwid[0]=parseInt(pbwid[0]);
       pbwid[1]=pbwid[1] || 0;

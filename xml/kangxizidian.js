@@ -11,7 +11,8 @@
 			  .attr("wh","wid",{"allowrepeat":true,"saveval":true})			  
 	},
 	extra: {
-		decompose: require('./decompose_kangxi.js')
+		decompose: require('./decompose_kangxi'),
+		py2wh: require('./py2wh')
 	},
 	min_yase_version:'0.0.16',
 	input:'kangxizidian.lst',

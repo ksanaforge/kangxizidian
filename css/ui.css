@@ -5,6 +5,12 @@
 .entry {
 	position: relative;
 }
+samepy:hover {text-decoration: underline;color:blue;cursor:pointer;}
+samezy:hover {text-decoration: underline;color:blue;cursor:pointer;}
+
+.nav-tabs li.active a {color:white;background: #428bca}
+.nav-tabs li.active a:hover {color:white;background: #357ebd}
+
 .entry .destroy {
 	position: absolute;
 	right: 10px;
@@ -29,13 +35,13 @@ img.eudc{
 -webkit-transition:-webkit-transform 0.2s ease-in; 
 }
 img.eudc:hover {
-	-webkit-transform:scale(3);
+	-webkit-transform:scale(4);
 }
 img.glyphwiki{
 -webkit-transition:-webkit-transform 0.3s ease-in; 
 }
 img.glyphwiki:hover {
-	-webkit-transform:scale(5);
+	-webkit-transform:scale(3);
 	background:white;
 }
 
