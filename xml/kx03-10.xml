@@ -237,7 +237,7 @@
 <t>
 <d/>《龍龕》：同䚕。
 </t>
-<pb id="1545"/>
+<pb edit="tw" id="1545"/>
 <part>角部</part>
 <wh n="kbk0000" unicode="278B6" wid="001">𧢶</wh>
 <sc n="9"/>
@@ -1000,7 +1000,7 @@
 <t>
 <ph/>《龍龕》：音務。
 </t>
-<pb id="1546"/>
+<pb edit="tw" id="1546"/>
 <part>豕部</part>
 <wh n="kbk0000" unicode="27C2D" wid="001">𧰭</wh>
 <sc n="10"/>
@@ -1629,7 +1629,7 @@
 <t>
 <ph/>《篇海類編》：避列切，音列。
 </t>
-<pb id="1547"/>
+<pb edit="tw" id="1547"/>
 <wh n="kbk0000" unicode="27FE3" wid="001">𧿣</wh>
 <sc n="11"/>
 <ps n="足部4畫"/>
@@ -2503,7 +2503,7 @@
 <ph/>《篇海類編》：音榼。
 </t>
 <part>辛部</part>
-<pb id="1548"/>
+<pb edit="tw" id="1548"/>
 <wh n="kbk0000" unicode="2840F" wid="001">𨐏</wh>
 <sc n="11"/>
 <ps n="辛部4畫"/>
@@ -3336,7 +3336,7 @@
 <t>
 <ph/>《龍龕》：丘逆切──人姓。〇〔按〕卽郤字之譌。
 </t>
-<pb id="1549"/>
+<pb edit="tw" id="1549"/>
 <wh n="kbk0000" unicode="28701" wid="001">𨜁</wh>
 <sc n="10"/>
 <ps n="邑部8畫"/>

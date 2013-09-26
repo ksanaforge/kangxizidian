@@ -1,7 +1,7 @@
 <xml src="kx02-02.xml">
 <juan n="02-02">丑集</juan>
 <part>口部</part>
-<pb id="1476"/>
+<pb edit="tw" id="1476"/>
 <wh n="kby0000" unicode="20BAA" wid="001">𠮪</wh>
 <sc n="5"/>
 <ps n="口部2畫"/>
@@ -634,7 +634,7 @@
 <t>
 <ph/>《篇海類編》：羊茹切，音預──高土貌。
 </t>
-<pb id="1477"/>
+<pb edit="tw" id="1477"/>
 <wh n="kby0000" unicode="212EA" wid="001">𡋪</wh>
 <sc n="9"/>
 <ps n="土部6畫"/>
@@ -1191,7 +1191,7 @@
 <t>
 <ph/>《字彙補》：去其切，音欺。《廣雅》：楚人云多也。
 </t>
-<pb id="1478"/>
+<pb edit="tw" id="1478"/>
 <wh n="kby0000" unicode="215BD" wid="001">𡖽</wh>
 <sc n="14"/>
 <ps n="夕部11畫"/>
@@ -1779,7 +1779,7 @@
 <t>
 <ph/>《篇海類編》：初角切，音㪬──恭謹貌。
 </t>
-<pb id="1479"/>
+<pb edit="tw" id="1479"/>
 <wh n="kby0000" unicode="21812" wid="001">𡠒</wh>
 <sc n="13"/>
 <ps n="10畫"/>

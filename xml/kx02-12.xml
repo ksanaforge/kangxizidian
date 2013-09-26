@@ -1,7 +1,7 @@
 <xml src="kx02-12.xml">
 <juan n="02-12">亥集</juan>
 <part>馬部</part>
-<pb id="1502"/>
+<pb edit="tw" id="1502"/>
 <wh n="kby0000" unicode="2988C" wid="001">𩢌</wh>
 <sc n="14"/>
 <ps n="馬部4畫"/>
@@ -299,7 +299,7 @@
 <d/>《篇海類編》：同鱴。
 </t>
 <part>鳥部</part>
-<pb id="1503"/>
+<pb edit="tw" id="1503"/>
 <wh n="kby0000" unicode="4CAA" wid="001">䲪</wh>
 <sc n="14"/>
 <ps n="鳥部3畫"/>
@@ -625,7 +625,7 @@
 <d/>《玉篇》：同𠐙。
 </t>
 <part>黃部</part>
-<pb id="1504"/>
+<pb edit="tw" id="1504"/>
 <wh n="kby0000" unicode="2A3B4" wid="001">𪎴</wh>
 <sc n="14"/>
 <ps n="黃部3畫"/>

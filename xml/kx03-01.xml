@@ -1,21 +1,21 @@
 <xml src="kx03-01.xml">
-<pb id="1505"/>
+<pb edit="tw" id="1505"/>
 （備考總目）
-<pb id="1506"/>
+<pb edit="tw" id="1506"/>
 （備考總目）
-<pb id="1507"/>
+<pb edit="tw" id="1507"/>
 （備考總目）
-<pb id="1508"/>
+<pb edit="tw" id="1508"/>
 （備考總目）
-<pb id="1509"/>
+<pb edit="tw" id="1509"/>
 （備考總目）
-<pb id="1510"/>
+<pb edit="tw" id="1510"/>
 （備考總目）
-<pb id="1511"/>
+<pb edit="tw" id="1511"/>
 （備考總目）
-<pb id="1512"/>
+<pb edit="tw" id="1512"/>
 （空白頁）
-<pb id="1513"/>
+<pb edit="tw" id="1513"/>
 <juan n="03-01">子集</juan>
 <part>一部</part>
 <wh n="kbk0000" unicode="20013" wid="001">𠀓</wh>
@@ -303,7 +303,7 @@
 <t>
 <ph/>《字彙補》：東敢切，音膽──石擊水之音。見宋人俗書。
 </t>
-<pb id="1514"/>
+<pb edit="tw" id="1514"/>
 <wh n="kbk0000" unicode="201F4" wid="001">𠇴</wh>
 <sc n="7"/>
 <ps n="人部5畫"/>
@@ -794,7 +794,7 @@
 <t>
 <d/>《字彙補》：𡩠字之譌。
 </t>
-<pb id="1515"/>
+<pb edit="tw" id="1515"/>
 <part>冫部</part>
 <wh n="kbk0000" unicode="205AC" wid="001">𠖬</wh>
 <sc n="3"/>
@@ -1247,7 +1247,7 @@
 <t>
 <ph/>《搜眞玉鏡》：音均。出《吳韻》。
 </t>
-<pb id="1516"/>
+<pb edit="tw" id="1516"/>
 <part>匕部</part>
 <wh n="kbk0000" unicode="2091D" wid="001">𠤝</wh>
 <sc n="9"/>
@@ -1604,7 +1604,7 @@
 <t>
 <ph/>《海篇》：音仙。又，音令。
 </t>
-<pb id="1517"/>
+<pb edit="tw" id="1517"/>
 <part>厶部</part>
 <wh n="kbk0000" unicode="20AD6" wid="001">𠫖</wh>
 <sc n="3"/>

@@ -1,5 +1,5 @@
 <xml src="kx03-03.xml">
-<pb id="1521"/>
+<pb edit="tw" id="1521"/>
 <juan n="03-03">寅集</juan>
 <part>子部</part>
 <wh n="kbk0000" unicode="2193D" wid="001">𡤽</wh>
@@ -702,7 +702,7 @@
 <t>
 <d/>《字彙補》：與劉同。出〈周憬碑〉。
 </t>
-<pb id="1522"/>
+<pb edit="tw" id="1522"/>
 <part>小部</part>
 <wh n="kbk0000" unicode="21B5B" wid="001">𡭛</wh>
 <sc n="6"/>
@@ -1361,7 +1361,7 @@
 <t>
 <d/>《海篇》：同垠。
 </t>
-<pb id="1523"/>
+<pb edit="tw" id="1523"/>
 <wh n="kbk0000" unicode="21E56" wid="001">𡹖</wh>
 <sc n="11"/>
 <ps n="山部8畫"/>
@@ -2078,7 +2078,7 @@
 <t>
 <ph/>《字彙補》：此宰切，音彩──與𣍚同。
 </t>
-<pb id="1524"/>
+<pb edit="tw" id="1524"/>
 <part>干部</part>
 <wh n="kbk0000" unicode="2218C" wid="001">𢆌</wh>
 <sc n="7"/>
@@ -2546,7 +2546,7 @@
 <t>
 <d/>《龍龕》：同㢣。
 </t>
-<pb id="1525"/>
+<pb edit="tw" id="1525"/>
 <part>弋部</part>
 <wh n="kbk0000" unicode="2237A" wid="001">𢍺</wh>
 <sc n="3"/>
@@ -3298,7 +3298,7 @@
 <t>
 <d/>《篇海類編》：同衝。
 </t>
-<pb id="1526"/>
+<pb edit="tw" id="1526"/>
 <wh n="kbk0000" unicode="225A2" wid="001">𢖢</wh>
 <sc n="20"/>
 <ps n="彳部17畫"/>

@@ -65,7 +65,7 @@
 <t>
 <d/>《字彙補》：古鎭字。見《集韻》。〇〔按〕《集韻》今作鋴。
 </t>
-<pb id="1550"/>
+<pb edit="tw" id="1550"/>
 <wh n="kbk0000" unicode="926B" wid="001">鉫</wh>
 <sc n="13"/>
 <ps n="金部5畫"/>
@@ -1035,7 +1035,7 @@
 <t>
 <ph/>《搜眞玉鏡》：音蕩。又，音奪。
 </t>
-<pb id="1551"/>
+<pb edit="tw" id="1551"/>
 <part>阜部</part>
 <wh n="kbk0000" unicode="28E19" wid="001">𨸙</wh>
 <sc n="5"/>
@@ -1643,7 +1643,7 @@
 <t>
 <ph/>《龍龕》：音隊。
 </t>
-<pb id="1552"/>
+<pb edit="tw" id="1552"/>
 <part>面部</part>
 <wh n="kbk0000" unicode="2920C" wid="001">𩈌</wh>
 <sc n="13"/>
@@ -2437,7 +2437,7 @@
 <t>
 <ph/>《川篇》：音𡨥。
 </t>
-<pb id="1553"/>
+<pb edit="tw" id="1553"/>
 <part>韭部</part>
 <wh n="kbk0000" unicode="29402" wid="001">𩐂</wh>
 <sc n="13"/>
@@ -3124,7 +3124,7 @@
 <ph/>《五音篇海》：音風。
 </t>
 <part>飛部</part>
-<pb id="1554"/>
+<pb edit="tw" id="1554"/>
 <wh n="kbk0000" unicode="29678" wid="001">𩙸</wh>
 <sc n="19"/>
 <ps n="飛部10畫"/>
