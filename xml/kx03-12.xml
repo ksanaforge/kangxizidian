@@ -240,7 +240,7 @@
 <t>
 <ph/>《搜眞玉鏡》：知卷切。
 </t>
-<pb edit="tw" id="1555"/>
+<pb ed="twsj" id="1555"/>
 <wh n="kbk0000" unicode="299E5" wid="001">𩧥</wh>
 <sc n="36"/>
 <ps n="馬部26畫"/>
@@ -744,7 +744,7 @@
 <t>
 <d/>《龍龕》：同耄。
 </t>
-<pb edit="tw" id="1556"/>
+<pb ed="twsj" id="1556"/>
 <wh n="kbk0000" unicode="29CA0" wid="001">𩲠</wh>
 <sc n="13"/>
 <ps n="鬼部4畫"/>
@@ -1636,7 +1636,7 @@
 <t>
 <ph/>《龍龕》：音雞。
 </t>
-<pb edit="tw" id="1557"/>
+<pb ed="twsj" id="1557"/>
 <wh n="kbk0000" unicode="2A1CA" wid="001">𪇊</wh>
 <sc n="24"/>
 <ps n="鳥部13畫"/>
@@ -2262,7 +2262,7 @@
 <t>
 <ph/>《搜眞玉鏡》：音票。
 </t>
-<pb edit="tw" id="1558"/>
+<pb ed="twsj" id="1558"/>
 <part>黑部</part>
 <wh n="kbk0000" unicode="2A421" wid="001">𪐡</wh>
 <sc n="15"/>
@@ -2708,7 +2708,7 @@
 <d/>《篇海類編》：同𪗍。
 </t>
 <part>齒部</part>
-<pb edit="tw" id="1559"/>
+<pb ed="twsj" id="1559"/>
 <wh n="kbk0000" unicode="2398B" wid="001">𣦋</wh>
 <sc n="15"/>
 <ps n="齒部0畫"/>

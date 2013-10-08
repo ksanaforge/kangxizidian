@@ -543,7 +543,7 @@
 <ph/>《五音篇海》：音絲。
 </t>
 <part>缶部</part>
-<pb edit="tw" id="1540"/>
+<pb ed="twsj" id="1540"/>
 <wh n="kbk0000" unicode="26237" wid="001">𦈷</wh>
 <sc n="13"/>
 <ps n="缶部7畫"/>
@@ -1007,7 +1007,7 @@
 <t>
 <ph/>《龍龕》：音耶。
 </t>
-<pb edit="tw" id="1541"/>
+<pb ed="twsj" id="1541"/>
 <wh n="kbk0000" unicode="26557" wid="001">𦕗</wh>
 <sc n="11"/>
 <ps n="耳部5畫"/>
@@ -1833,7 +1833,7 @@
 <t>
 <d/>《五音篇海》：與佛同。
 </t>
-<pb edit="tw" id="1542"/>
+<pb ed="twsj" id="1542"/>
 <part>至部</part>
 <wh n="kbk0000" unicode="26938" wid="001">𦤸</wh>
 <sc n="9"/>
@@ -2342,7 +2342,7 @@
 <t>
 <d/>《字彙補》：靤字之譌。
 </t>
-<pb edit="tw" id="1543"/>
+<pb ed="twsj" id="1543"/>
 <wh n="kbk0000" unicode="26AEE" wid="001">𦫮</wh>
 <sc n="16"/>
 <ps n="色部10畫"/>

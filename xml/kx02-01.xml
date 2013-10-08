@@ -1,17 +1,17 @@
 <xml src="kx02-01.xml">
-<pb edit="tw" id="1467"/>
+<pb ed="twsj" id="1467"/>
 （補遺總目）
-<pb edit="tw" id="1468"/>
+<pb ed="twsj" id="1468"/>
 （補遺總目）
-<pb edit="tw" id="1469"/>
+<pb ed="twsj" id="1469"/>
 （補遺總目）
-<pb edit="tw" id="1470"/>
+<pb ed="twsj" id="1470"/>
 （補遺總目）
-<pb edit="tw" id="1471"/>
+<pb ed="twsj" id="1471"/>
 （補遺總目）
-<pb edit="tw" id="1472"/>
+<pb ed="twsj" id="1472"/>
 （補遺總目）
-<pb edit="tw" id="1473"/>
+<pb ed="twsj" id="1473"/>
 <juan n="02-01">子集</juan>
 <part>乙部</part>
 <wh n="kby0000" unicode="3424" wid="001">㐤</wh>
@@ -372,7 +372,7 @@
 <t>
 <ph/>《廣韻》：魯過切，音嬴──𠏢，弱也。
 </t>
-<pb edit="tw" id="1474"/>
+<pb ed="twsj" id="1474"/>
 <wh n="kby0000" unicode="203E3" wid="001">𠏣</wh>
 <sc n="15"/>
 <ps n="人部13畫"/>
@@ -715,7 +715,7 @@
 <t>
 <d/>《篇海類編》：與勥同。
 </t>
-<pb edit="tw" id="1475"/>
+<pb ed="twsj" id="1475"/>
 <part>力部</part>
 <wh n="kby0000" unicode="208D0" wid="001">𠣐</wh>
 <sc n="5"/>
