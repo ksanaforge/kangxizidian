@@ -32,7 +32,7 @@
         if (t) params.wh=t[1];
       }
       params.wid=parseInt(wh.attr("wid"));
-      params.pagenumber=parseInt(div.parent().find("#pagenumber").html());
+      params.pagenumber=parseInt(div.parent().parent().find("#pagenumber").html());
       var origin=_.template(origin_template,params);
       clipboard.set(sel+origin, 'text');
       var oldlabel=$("#btnexcerptcopy").html();
