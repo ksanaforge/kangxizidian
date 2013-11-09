@@ -37,8 +37,8 @@ define(['underscore','text!./text.tmpl'],
 
     },
     adjustlayout:function(def) {
-      def='<div class="row"><div class="col-4">'+def;
-      def=def.replace('</wh>','</wh></div><div class="col-8">');
+      def='<div class="row"><div class="col-md-4">'+def;
+      def=def.replace('</wh>','</wh></div><div class="col-md-8">');
       def=def.replace('<t>','</div></div><t>');
       return def;
     },
