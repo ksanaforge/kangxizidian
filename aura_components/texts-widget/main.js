@@ -14,7 +14,7 @@ define(['underscore','text!./texts.tmpl'], function(_,template) {
         this.$el.animate({scrollTop: exists.offset().top })
       } else {
         if (!wh) return;
-        var textdom=$('<div><div data-aura-widget="text-widget" data-wh="'+wh+'" data-tofind="'+tofind+'"></div></div>');
+        var textdom=$('<div><div data-aura-component="text-widget" data-wh="'+wh+'" data-tofind="'+tofind+'"></div></div>');
         var dom=this.$el.find(".texts").prepend(textdom);
         this.sandbox.start(textdom);
         //this.sandbox.widgets.start('text-widget',textdom);
