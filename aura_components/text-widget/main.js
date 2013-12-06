@@ -33,27 +33,28 @@ define(['underscore','text!./text.tmpl'],
         return "<samezy>"+k+"</samezy>";
       });
       $zy.html(zy.join(","));
-      $zy.after("<py>"+py.join(",")+"</py>");
+      $zy.after("<py>"+py.join(",")+"</py><br/>");
 
     },
     adjustlayout:function(def) {
       def='<div class="row"><div class="col-md-4">'+def;
-      def=def.replace('</wh>','</wh></div><div class="col-md-8">');
+      def=def.replace('</wh>','</wh ></div><div class="col-md-8">');
       def=def.replace('<t>','</div></div><t>');
       return def;
     },
     showdef:function(wh,data2,tagdata) {
-        data2.text=this.adjustlayout(data2.text);
+        //data2.text=this.adjustlayout(data2.text);
         data2.unicode=this.sandbox.cjkutil.getutf32ch(wh).toString(16).toUpperCase();
         var html=_.template(template,data2);
         var that=this;
-        html=html.replace(/(&.*?;)/g,'<img src="missingcharacter.png" title="$1"/>');
+        html=html.replace(/&(.*?);/g,'<img class="glyphwiki" src="" title="ebag_$1"/>');
         html=html.replace(/<note n="(.*)"\/>/g,'<span class="note" data-toggle="tooltip" title="$1"/>');
 
         html=that.sandbox.dgg.tagify(html);
         this.html(html);
 
-        this.sandbox.loadimages.apply(that,[that.$el]);
+        //this.sandbox.loadimages.apply(that,[that.$el]);
+
         var opts={db:this.db};
         opts.attr="id";opts.tag="pb";opts.ntag=tagdata[0][1].ntag;
         this.sandbox.yase.getTagAttr(opts,function(err,pn){

@@ -41,7 +41,7 @@ define(['underscore','backbone','text!./result.tmpl','text!./item.tmpl'],
         var newitem=_.template(itemtemplate,{wh:res[i].closest.head,slot:res[i].slot,text:res[i].text,seq:res[i].seq+1 });
         //protect kxr in tag
         newitem=newitem.replace(/="&(.*?);"/g,'="{$1}"');
-        newitem=newitem.replace(/(&.*?;)/g,'<img src="missingcharacter.png" title="$1"/>');
+        newitem=newitem.replace(/&(.*?);/g,'<img class="glyphwiki" src="" title="ebag_$1"/>');
         newitem=newitem.replace(/\{(.*?)\}/g,'&$1;');
 
         $listgroup.append(newitem); // this is slow  to get newitem height()
