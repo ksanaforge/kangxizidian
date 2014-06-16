@@ -1,20 +1,13 @@
-define(['underscore'], 
-  function(_) {
+define(['underscore','text!./variants.json'], 
+  function(_,vars) {
   return {
     //dbname : 'kangxizidian',
+    variants:JSON.parse(vars),
     type: 'Backbone',
-
-    getdef:function(wh,target,tofind) {
-      if (!this.db) return;
-      var that=this;
-      var yase=this.sandbox.yase;
-      var opts={db:this.db,tag:"wh",tofind:wh,grouped:true};
-      yase.phraseSearch(opts,function(err,res){
-        var first=parseInt(Object.keys(res[0])[0],10);
-        if (isNaN(first)) {          
-          return null;
-        }
-        yase.closestTag( {db:that.db, tag:["wh","pb"], slot:first} 
+    getdefTag:function(db,first,wh,target,opts) {
+        var yase=this.sandbox.yase;
+        var that=this;
+        yase.closestTag( {db:db, tag:["wh","pb"], slot:first} 
           ,function(err,data){
             opts.ntag=data[0][0].ntag;
             opts.tofind=tofind;
@@ -23,10 +16,25 @@ define(['underscore'],
             yase.getTextByTag(opts, function(err,data2) {
                 that.sandbox.emit('getdef.'+target,wh,data2,data);
             });
-
         });
+    },
+    getdef:function(wh,target,tofind,noretry) {
+      if (!this.db) return;
+      var that=this;
+      var yase=this.sandbox.yase;
+      var opts={db:this.db,tag:"wh",tofind:wh,grouped:true};
+      yase.phraseSearch(opts,function(err,res){
+        var first=parseInt(Object.keys(res[0])[0],10);
+        if (isNaN(first)) { 
+          
+          var unicode=that.sandbox.cjkutil.getutf32ch(wh).toString(16).toUpperCase();
+          var variant=that.variants[unicode];
+          if (variant) variant=that.sandbox.cjkutil.ucs2string( parseInt(variant,16) );
+          if (!noretry && variant)       that.getdef(variant,target,tofind,true);
+          return;
+        }
+        that.getdefTag(that.db,first,wh,target,opts);
       });
-      
     },
 
     initialize: function() {
