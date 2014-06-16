@@ -4,7 +4,7 @@ define(['underscore','text!./variants.json'],
     //dbname : 'kangxizidian',
     variants:JSON.parse(vars),
     type: 'Backbone',
-    getdefTag:function(db,first,wh,target) {
+    getdefTag:function(db,first,wh,tofind,target) {
         var yase=this.sandbox.yase;
         var that=this;
         var opts={db:db,grouped:true,tag:"wh"};
@@ -34,7 +34,7 @@ define(['underscore','text!./variants.json'],
           if (!noretry && variant)       that.getdef(variant,target,tofind,true);
           return;
         }
-        that.getdefTag(that.db,first,wh,target);
+        that.getdefTag(that.db,first,wh,tofind,target);
       });
     },
 
