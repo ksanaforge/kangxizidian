@@ -4,9 +4,10 @@ define(['underscore','text!./variants.json'],
     //dbname : 'kangxizidian',
     variants:JSON.parse(vars),
     type: 'Backbone',
-    getdefTag:function(db,first,wh,target,opts) {
+    getdefTag:function(db,first,wh,target) {
         var yase=this.sandbox.yase;
         var that=this;
+        var opts={db:db,grouped:true,tag:"wh"};
         yase.closestTag( {db:db, tag:["wh","pb"], slot:first} 
           ,function(err,data){
             opts.ntag=data[0][0].ntag;
@@ -33,7 +34,7 @@ define(['underscore','text!./variants.json'],
           if (!noretry && variant)       that.getdef(variant,target,tofind,true);
           return;
         }
-        that.getdefTag(that.db,first,wh,target,opts);
+        that.getdefTag(that.db,first,wh,target);
       });
     },
 
