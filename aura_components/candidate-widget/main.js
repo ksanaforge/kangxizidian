@@ -31,7 +31,7 @@ define(['underscore','backbone','text!./candidate.tmpl','text!./item.tmpl'],
         //protect kxr in tag
         newitem=this.sandbox.dgg.tagify(newitem);
         $candidates.append(newitem); // this is slow  to get newitem height()
-        if (i-now>100) break;
+        if (i-now>200) break;
       }
       this.sandbox.dgg.loadglyphs.apply(this,[ $candidates]);
       $candidates.find(".glyphwiki").removeClass("glyphwiki");
