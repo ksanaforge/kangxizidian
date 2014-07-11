@@ -17,7 +17,7 @@ define(['underscore','text!./tofind.tmpl'], function(_,template) {
     },
 
     initialize: function() {
-      var tofind=localStorage.getItem("tofind");
+      //var tofind=localStorage.getItem("tofind");
 
       if (location.hash) {
         tofind=location.hash.substring(1);
@@ -25,8 +25,8 @@ define(['underscore','text!./tofind.tmpl'], function(_,template) {
       }
      	this.html(_.template(template,{ value:this.options.value||""}) );
       $("#tofind").focus();
-      $("#tofind").val(tofind);
-      this.dosearch();
+      //$("#tofind").val(tofind);
+      //this.dosearch();
     }
   };
 });

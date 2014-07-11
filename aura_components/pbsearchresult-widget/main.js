@@ -7,11 +7,15 @@ define(['underscore','backbone','text!./result.tmpl','text!./item.tmpl','text!./
     },
     resize:function() {
       var that=this;
-      this.$el.css("height", (window.innerHeight - this.$el.offset().top -18) +"px");
+      // this.$el.css("height", (window.innerHeight - this.$el.offset().top -18) +"px");
     },
     whclick:function(e) {
       var btn=$(e.target);
-      this.sandbox.emit("wh.change",btn.text() ||btn.find("img").attr("title") || btn.attr("title"));
+      this.sandbox.emit("wh.change",btn.text() || btn.find("img").attr("title") || btn.attr("title"));
+      //this.sandbox.emit("tofind.change",btn.text() || btn.find("img").attr("title") || btn.attr("title"));
+      //$("#tofind").val(btn.text() || btn.find("img").attr("title") || btn.attr("title"));
+      //$("#page9_explain > div").hide();
+      //$("#explain").show();
     },
     render:function() {
       this.resize();
