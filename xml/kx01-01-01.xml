@@ -1,8 +1,18 @@
 <xml src="kx01-01-01.xml">
+<pb ed="twsj" id="0000"/>
+<wh n="k000000" unicode=" " wid="000">開放康熙字典開始</wh>
+<t>
+</t>
 <pb ed="twsj" id="0001"/>
-（子集目次頁）
+<wh n="k000000" unicode=" " wid="000">子集目次頁</wh>
+<t>
+（頁0001，子集目次頁）
+</t>
 <pb ed="twsj" id="0002"/>
-（子集目次頁）
+<wh n="k000000" unicode=" " wid="000">子集目次頁</wh>
+<t>
+（頁0002，子集目次）
+</t>
 <pb ed="twsj" id="0003"/>
 <pb ed="wyd" id="001a"/>
 <juan n="01-01-01">子集上</juan>
@@ -875,7 +885,7 @@
 </t>
 <pb ed="twsj" id="0010"/>
 <pb ed="wyd" id="017b"/>
-<wh n="k000000" unicode="4E46" wid="001">乆</wh>
+<wh n="k000000" unicode="4E46" wid="001">久</wh>（原作乆）
 <sc n="3"/>
 <ps n="丿部2畫"/>
 <t>
@@ -2048,7 +2058,7 @@
 <ph/>又，《韻補》叶徒陽切。班固〈高祖泗水亭𥓓〉：寸木尺土，無竢斯亭；揚威斬蛇，金精摧傷。
 </t>
 <pb ed="wyd" id="035a"/>
-<wh n="k000000" unicode="4EAE" wid="004">亮</wh>
+<wh n="k000000" unicode="4EAE" wid="004">亮</wh>（原作亮）
 <sc n="9"/>
 <ps n="亠部7畫"/>
 <zy>ㄌㄧㄤˋ,ㄌㄧㄤˊ</zy>
