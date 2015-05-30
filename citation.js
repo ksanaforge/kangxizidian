@@ -33,4 +33,4 @@ out.forEach(function(t){
 });
 out=out.map(function(t){return t.join("\t")})
 console.log(accumulate)
-fs.writeFileSync("titles.txt",out.join("\n"),"utf8")
+fs.writeFileSync("kangxi_titles.txt",out.join("\n"),"utf8")
