@@ -1,18 +1,4 @@
 <xml src="kx01-01-01.xml">
-<pb ed="twsj" id="0000"/>
-<wh n="k000000" unicode=" " wid="000">開放康熙字典開始</wh>
-<t>
-</t>
-<pb ed="twsj" id="0001"/>
-<wh n="k000000" unicode=" " wid="000">子集目次頁</wh>
-<t>
-（頁0001，子集目次頁）
-</t>
-<pb ed="twsj" id="0002"/>
-<wh n="k000000" unicode=" " wid="000">子集目次頁</wh>
-<t>
-（頁0002，子集目次）
-</t>
 <pb ed="twsj" id="0003"/>
 <pb ed="wyd" id="001a"/>
 <juan n="01-01-01">子集上</juan>
